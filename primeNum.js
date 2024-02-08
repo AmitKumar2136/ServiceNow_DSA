@@ -1,18 +1,21 @@
-var a = 127;
+var num = 11;
 
-
-function IsPrimneNum(num){
-    if ( num <= 1) return false;
-    if (num <= 3) return true;
-
-    for(let i=2; i<= Math.sqrt(num); i++){
-        if(num % i === 0){
-            return false
-        }
-    }
-
-  return true;
+function isPrimeNum(num){
+    
+    if(num <=1) return false;
+    if(num <=3) return true;
+    
+   for (let i= 2; i<=Math.floor(num/2); i++){
+       if(num % i === 0){
+           return false;
+       }
+   }
+    
+    return true;
+    
 }
 
-const result = IsPrimneNum(a);
-console.log(result);
+
+const output = isPrimeNum(num);
+console.log('output', output);
+
